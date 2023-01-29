@@ -32,36 +32,36 @@ def request():
     # print(query)
     while True:
         query.lower()
-        if "wikipedia" in query:
+        if "wikipedia" in query.lower():
             jarvisbol("Searching Wikipedia")
             query = query.replace("wikipedia","")
             webbrowser.open(f"https://en.wikipedia.org/wiki/{query}")
             request()
-        elif "open youtube" in query:
+        elif "open youtube" in query.lower():
             jarvisbol("opening youtube")
             # query = query.replace("wikipedia","")
             webbrowser.open("https://m.youtube.com/")
             request()
-        elif "open code" in query:
+        elif "open code" in query.lower():
             coder_thikana = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
             os.startfile(coder_thikana)
             request()
-        elif "open powerpoint" in query:
+        elif "open powerpoint" in query.lower():
             p_thikana = "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE"
             os.startfile(p_thikana)
             request()
-        elif "open word" in query:
+        elif "open word" in query.lower():
             w_thikana = "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
             os.startfile(w_thikana)
             request()
-        elif "open google" in query:
+        elif "open google" in query.lower():
             webbrowser.open("https://www.google.com/")
             request()
-        elif "open notepad++" in query:
+        elif "open notepad++" in query.lower():
             n_thikana = "C:\\Program Files\\Notepad++\\notepad++.exe"
             os.startfile(n_thikana)
             request()
-        elif "open q-basic" in query:
+        elif "open q-basic" in query.lower():
             q_thikana = "C:\\Users\\tapas\\Downloads\\qb64_2021-11-07-03-00-00_4d85302_win-x86\\qb64\\qb64.exe"
             os.startfile(q_thikana)
             request()
@@ -81,7 +81,27 @@ def request():
             on_thikana = "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTE.EXE"
             os.startfile(on_thikana)
             request()
-        
+
+        elif "open github" in query.lower():
+            webbrowser.open("https://www.github.com/")
+            request()
+        elif "play songs" in query.lower():
+            webbrowser.open("https://coder-saptak291.github.io/Song-Website/")
+            request()
+        elif "open wavepad" in query.lower():
+            wp_thikana = "C:\\Program Files (x86)\\NCH Software\\WavePad\\wavepad.exe"
+            os.startfile(wp_thikana)
+            request()
+        elif "open audacity" in query.lower():
+            ac_thikana = "C:\\Program Files\\Audacity\\Audacity.exe"
+            os.startfile(ac_thikana)
+            request()
+        elif "shutdown" in query.lower():
+            os.system("shutdown /s /t 1")
+        elif "restart" in query.lower():
+            os.system("shutdown /r /t 1")
+        elif "logout" in query.lower():
+            os.system("shutdown -l")
             
         else:
             jarvisbol("Sir please enter correctly")
